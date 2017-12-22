@@ -1,13 +1,22 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <base-navbar />
     <router-view/>
   </div>
 </template>
 
 <script>
+import BaseNavbar from './components/BaseNavbar.vue'
 export default {
-  name: 'app'
+  name: 'app',
+  data () {
+    return {
+      currentRoute: window.location.pathname
+    }
+  },
+  components: {
+    BaseNavbar
+  }
 }
 </script>
 

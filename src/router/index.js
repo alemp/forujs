@@ -1,15 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import PageHome from '@/components/PageHome'
 
 Vue.use(Router)
 
+export const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: PageHome
+  }
+]
+
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
-  ]
+  routes
 })
